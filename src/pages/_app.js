@@ -1,7 +1,11 @@
 import "@/styles/globals.css";
 import Layout from "../components/layout";
 
-export default function App({ Component, pageProps }) {
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Config, config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Layout>
@@ -10,3 +14,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default MyApp;
