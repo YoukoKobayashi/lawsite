@@ -1,3 +1,4 @@
+import Meta from "@/components/meta";
 import Container from "@/components/container";
 import Hero from "./hero";
 import PostBody from "@/components/post-body";
@@ -6,11 +7,18 @@ import {
   TwoColumn,
   TwoColumnMain,
   TwoColumnSidebar,
-  } from "@/components/two-column";
+} from "@/components/two-column";
+import eyecatch from "images/about.jpg";
 
 export default function About() {
   return (
     <Container>
+      <Meta pageTitle="アバウト"
+        pageDesc="About development activities"
+        pageImg={eyecatch.src}
+        pageImageW={eyecatch.width}
+        pageImageH={eyecatch.height}
+      />
       <Hero title="About" subtitle="About development activities" />
 
       <TwoColumn>
@@ -38,5 +46,4 @@ export default function About() {
       </TwoColumn>
     </Container>
   );
-  
 }
